@@ -1,0 +1,14 @@
+{
+    "geodb": {
+        "endpoints": {
+            "cities": "https://wft-geo-db.p.rapidapi.com/v1/geo/cities"
+        },
+        "key": "18850b4654mshbf305b39daae1f3p10a019jsn3e41be1e08e3"
+    },
+    "openweather": {
+        "endpoints": {
+            "onecall": "https://api.openweathermap.org/data/2.5/onecall"
+        },
+        "key": "91e564a96017283d2fc815fe44ab8e39"
+    }
+}

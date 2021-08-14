@@ -1,0 +1,35 @@
+@mixin slideIn {
+  --delay-factor: 0;
+  animation: slide-in .3s ease-in forwards;
+  animation-delay: calc(150ms * var(--delay-factor));
+  opacity: 0;
+  
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);    
+    }
+  } 
+}
+
+@mixin scaleIn {
+  --delay-factor: 0;
+  animation: scale-in .3s ease-in forwards;
+  animation-delay: calc(150ms * var(--delay-factor));
+  opacity: 0;
+  
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  } 
+}

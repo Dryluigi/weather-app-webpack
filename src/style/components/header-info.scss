@@ -1,0 +1,18 @@
+@import "../animations";
+
+header-info {
+  display: block;
+  margin: 1rem 0;
+
+  > * {
+    @include slideIn();
+  }
+
+  .city {
+    font-weight: 500;
+  }
+
+  .date {
+    font-weight: 400;
+  }
+}

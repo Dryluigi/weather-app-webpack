@@ -1,0 +1,99 @@
+@import "../variables";
+@import "../animations";
+@import "../mixins";
+
+.header-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 0;
+
+  &__highlight {
+    flex: 1;
+    display: flex;
+  
+    img {
+      $size: 13rem;
+      width: $size;
+      object-fit: contain;
+      $boxShadow: drop-shadow(8px 8px 2px #222);
+      filter: $boxShadow;
+      -webkit-filter: $boxShadow;
+      margin-right: 2rem;
+      @include scaleIn();
+
+      @include mobileScreen() {
+        $size: 8rem;
+        width: $size;
+      }
+    }
+  
+    h2 {
+      font-size: 7rem;
+      font-weight: 500;
+      @include scaleIn();
+
+      @include mobileScreen() {
+        font-size: 5rem;
+      }
+    }
+  
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      @include scaleIn();
+    }
+
+    @include tabletScreen() {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  .separator {
+    height: 12rem;
+    width: 1px;
+    opacity: .7;
+    background-color: $colorNeutralWhite;
+    margin: 0 2rem;
+
+    @include tabletScreen() {
+      display: none;
+    }
+  }
+  
+  &__detail {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  
+    > div {
+      h4 {
+        font-size: 2rem;
+
+        @include mobileScreen() {
+          font-size: 1.5rem;
+        }
+      }
+  
+      p {
+        font-size: 1.5rem;
+        font-weight: 300;
+
+        @include mobileScreen() {
+          font-size: 1rem;
+        }
+      }
+
+      @include scaleIn();
+    }
+ 
+    @include tabletScreen() {
+      width: 100%;
+    }
+  }
+
+  @include tabletScreen() {
+    flex-direction: column;
+  }
+}

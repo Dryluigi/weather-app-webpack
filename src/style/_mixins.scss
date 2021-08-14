@@ -1,0 +1,28 @@
+@mixin wrapper {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 960px;
+}
+
+@mixin cardColor {
+  background-color: rgba(54, 54, 54, .2);
+  border-radius: 5px;
+}
+
+@mixin responsiveScreen($maxWidth) {
+  @media screen and (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+@mixin tabletScreen {
+  @include responsiveScreen(900px) {
+    @content;
+  }
+}
+
+@mixin mobileScreen {
+  @include responsiveScreen(500px) {
+    @content;
+  }
+}

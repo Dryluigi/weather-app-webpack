@@ -1,0 +1,52 @@
+@import "./variables";
+@import "./mixins";
+@import "./typography";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include wrapper();
+  min-height: 100vh;
+  background: $backgroudGradient;
+  color: $colorNeutralBlack;
+  font-family: $primaryFontFamily;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.weather-list {
+  display: flex;
+  flex-direction: column;
+
+  &--horizontal {
+    justify-content: space-between;
+    flex-direction: row;
+  } 
+}
+
+.weather-section {
+  margin: 3rem 0;
+
+  h2 {
+    font-size: 2;
+    font-weight: 500;
+    margin-bottom: .5em;
+  }
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
